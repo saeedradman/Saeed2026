@@ -1,0 +1,28 @@
+GitHub Personal Access Token: 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
+
+
+- The model does not perform medical diagnosis, but classifies MRI images based on learned visual patterns associated with Multiple Sclerosis.
+
+- The dataset was programmatically downloaded and managed using Kagglehub to ensure reproducibility and eliminate manual intervention in the data acquisition pipeline. The model was trained from scratch without using any pre-trained weights.
+
+- A custom convolutional neural network was designed and trained from scratch using batch normalization, dropout, and adaptive average pooling to ensure training stability and robustness for MRI-based multiple sclerosis classification.
+
+- Data augmentation was applied online during training rather than during dataset preparation to ensure stochastic variability and to prevent distribution shift between training and validation sets.
+
+
+- "Why num_workers=0?"
+
+Due to Windows multiprocessing limitations during PyTorch training, num_workers was set to zero for stability, without noticeable impact on training performance.
+
+-------------------------------------------------
+
+
+
+
+Removing generated output:
+
+rmdir data\processed_clean -Recurse -Force
+rmdir models -Recurse -Force
+rmdir src\__pycache__ -Recurse -Force
+
+
